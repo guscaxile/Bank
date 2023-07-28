@@ -20,5 +20,7 @@ public class App {
         if (!account.withDraw(200)){
             System.out.println("Você não tem saldo suficiente para sacar.");
         }
+
+        System.out.println(account);
     }
 }
