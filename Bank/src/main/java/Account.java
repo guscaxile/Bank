@@ -4,6 +4,8 @@ public class Account {
     private String cc;
     private String name;
 
+    private double balance;
+
     private static final int MAX_LENGTH = 12;
 
     public Account(String ag, String cc, String name) {
@@ -18,5 +20,19 @@ public class Account {
         } else {
             this.name = name;
         }
+        System.out.println(this.name);
+    }
+
+    public void deposit(double value){
+        balance += value;
+    }
+
+    public boolean withDraw(double value) {
+        if (balance < value) {
+            return false;
+        }
+
+        balance -= value;
+        return true;
     }
 }

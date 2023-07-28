@@ -3,7 +3,10 @@ public class App {
     public static void main(String[] args) {
 
         Account account = new Account("0001", "1234", "Gustavo");
-        Account account2 = new Account("002", "1234", "Guilherme");
 
+        boolean succeed = account.withDraw(200.0);
+        if (!succeed){
+            System.out.println("Você não tem saldo suficiente para sacar.");
+        }
     }
 }
